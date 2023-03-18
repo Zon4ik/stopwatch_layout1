@@ -1,13 +1,17 @@
 package com.example.myapplication;
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 
+=======
+>>>>>>> beec911 (Initial commit)
 import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
@@ -15,12 +19,22 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+=======
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+>>>>>>> beec911 (Initial commit)
 public class MainActivity extends AppCompatActivity {
     public static final int NANOSECONDS_CONVERT = 1000000000;
     public static final int MICROSECONDS_CONVERT = 1000;
     public static final int SEXAGESIMA_CONVERT = 60;
     public static final int SEXAGESIMA_FORMAT_CONVERT = 2;
     public static final String BROADCAST_TIME_UPDATE = "BROADCAST_TIME_UPDATE";
+<<<<<<< HEAD
     private Button start;
     private TextView tiempo;
     private long inicio;
@@ -30,16 +44,33 @@ public class MainActivity extends AppCompatActivity {
     private Button stop;
 
     @SuppressLint("MissingInflatedId")
+=======
+//    private Button start;
+    private TextView tiempo;
+    private long inicio;
+    private Long terminado=null;
+    private boolean running=false;
+//    private Button stop;
+
+    @SuppressLint({"MissingInflatedId", "ClickableViewAccessibility"})
+>>>>>>> beec911 (Initial commit)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         this.tiempo = (TextView) findViewById(R.id.tiempo);
+<<<<<<< HEAD
         this.layout = (RelativeLayout) findViewById(R.id.layout);
 
         this.start = (Button) findViewById(R.id.start);
         this.stop = (Button) findViewById(R.id.stop);
+=======
+        RelativeLayout layout = (RelativeLayout) findViewById(R.id.layout);
+
+//        this.start = (Button) findViewById(R.id.start);
+//        this.stop = (Button) findViewById(R.id.stop);
+>>>>>>> beec911 (Initial commit)
 
 
         boolean[] click = {false};
@@ -101,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+<<<<<<< HEAD
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -133,6 +165,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+=======
+>>>>>>> beec911 (Initial commit)
     }
 
     private void sendBroadcast() {
